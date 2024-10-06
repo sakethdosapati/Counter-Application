@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(213, 131, 246);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#main {
+  border: 2px solid #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 40vh;
+  width: 30vh;
+  background: linear-gradient(145deg, #c8e666, #40fb7e);
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 150px auto;
+  transition: all 0.3s ease;
+}
+
+#main:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#sub-div1, #sub-div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+button {
+  background: linear-gradient(45deg, #34c8da, #2d9bf0);
   color: white;
+  padding: 12px 25px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background: linear-gradient(45deg, #2d9bf0, #4CAF50);
+  transform: translateY(-5px) scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:active {
+  background-color: #2979ff;
+  transform: translateY(0) scale(1);
+}
+
+h2 {
+  margin: 15px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+h2:hover {
+  color: #ff6f61;
+}
+
+#sub-div2 button {
+  background: linear-gradient(45deg, #f6685e, #f44336);
+}
+
+#sub-div2 button:hover {
+  background: linear-gradient(45deg, #f44336, #ff1744);
+  transform: scale(1.1);
+}
+
+#sub-div2 button:active {
+  background-color: #d32f2f;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-5px);
   }
 }
